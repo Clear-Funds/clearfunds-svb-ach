@@ -1,4 +1,4 @@
-from src.main import SVBACH
+from clearfunds_svb_ach.ach import SVBACH
 
 
 # create ach

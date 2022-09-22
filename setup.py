@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='clearfunds_svb_ach',
-    version='0.0.1',
+    version='0.0.2',
     author='Synares',
     author_email='saad@synares.com',
     description='SVB-ACH for clearfunds',
@@ -18,5 +18,6 @@ setuptools.setup(
                       'chardet',
                       'idna',
                       'urllib3',
-                      'requests'],
+                      'requests',
+                      'jwcrypto'],
 )
