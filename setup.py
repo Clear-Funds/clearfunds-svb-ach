@@ -11,7 +11,7 @@ setuptools.setup(
     description='SVB-ACH for clearfunds',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/Synares/clearfunds-svb-ach.git',
+    url='https://github.com/Clear-Funds/clearfunds-svb-ach',
     license='MIT',
     packages=['clearfunds_svb_ach'],
     install_requires=['certifi',
