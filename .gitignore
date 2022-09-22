@@ -3,3 +3,4 @@ venv/
 .idea/
 clearfunds_svb_ach.egg-info
 clearfunds_svb_ach/__pycache__
+clearfunds_svb_ach/__pycache__/
