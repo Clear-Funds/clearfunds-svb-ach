@@ -66,7 +66,7 @@ class SVBACH(ACHAuthorization):
     def create_ach(self, batch_data, receiver_data, amount, date):
         body = {
             "batch_details": {
-                "svb_account_number": f"{batch_data.get('account_number')}",
+                "svb_account_number": batch_data.get('account_number'),
                 "direction": batch_data.get('direction'),
                 "sec_code": "CCD",
                 "settlement_priority": "STANDARD",
@@ -76,10 +76,10 @@ class SVBACH(ACHAuthorization):
             "transfers": [
                 {
                     "amount": amount,
-                    "receiver_account_number": f"{receiver_data.get('account_number')}",
+                    "receiver_account_number": {receiver_data.get('account_number')},
                     "receiver_account_type": receiver_data.get('type'),
                     "receiver_name": receiver_data.get('name'),
-                    "receiver_routing_number": f"{receiver_data.get('routing_number')}"
+                    "receiver_routing_number": {receiver_data.get('routing_number')}
                 }
             ]
         }
