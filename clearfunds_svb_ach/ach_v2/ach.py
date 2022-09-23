@@ -76,10 +76,10 @@ class SVBACH(ACHAuthorization):
             "transfers": [
                 {
                     "amount": amount,
-                    "receiver_account_number": {receiver_data.get('account_number')},
+                    "receiver_account_number": receiver_data.get('account_number'),
                     "receiver_account_type": receiver_data.get('type'),
                     "receiver_name": receiver_data.get('name'),
-                    "receiver_routing_number": {receiver_data.get('routing_number')}
+                    "receiver_routing_number": receiver_data.get('routing_number')
                 }
             ]
         }
