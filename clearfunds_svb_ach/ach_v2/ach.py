@@ -68,6 +68,8 @@ class SVBACH(ACHAuthorization):
             "batch_details": {
                 "svb_account_number": batch_data.get('account_number'),
                 "direction": batch_data.get('direction'),
+                "company_entry_description": batch_data.get('company_entry_description'),
+                "company_name": batch_data.get('company_name'),
                 "sec_code": "CCD",
                 "settlement_priority": "STANDARD",
                 "effective_entry_date": date,
@@ -76,6 +78,7 @@ class SVBACH(ACHAuthorization):
             "transfers": [
                 {
                     "amount": amount,
+                    "additional_information": receiver_data.get('additional_information', {}),
                     "receiver_account_number": receiver_data.get('account_number'),
                     "receiver_account_type": receiver_data.get('type'),
                     "receiver_name": receiver_data.get('name'),
